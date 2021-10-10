@@ -8,14 +8,9 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <!--- This is a comment --->
-
-                    {{ __('You are logged in!') }}
+                    <a href='registers/'><button>Register new</button></a>
+                    <br><br><br>
+                    <a href='s'><button>see details</button></a>
                 </div>
             </div>
         </div>

@@ -13,18 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/register', 'RegistrationController@index');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
-
+Route::resource('users','App\Http\Controllers\datamanip');
+Route::get('/registers', [App\Http\Controllers\RegistrationController::class, 'index'])->name('registers');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+/*
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+*/

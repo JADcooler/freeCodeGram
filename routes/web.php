@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\controllers\datamanip;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('index',[datamanip::class,'index']);
 
 Auth::routes();
-Route::resource('users','App\Http\Controllers\datamanip');
+
 Route::get('/registers', [App\Http\Controllers\RegistrationController::class, 'index'])->name('registers');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

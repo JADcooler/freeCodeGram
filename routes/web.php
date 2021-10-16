@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\datamanip;
+use App\Http\controllers\SQLController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +16,8 @@ use App\Http\controllers\datamanip;
 */
 
 //Route::get('/register', 'RegistrationController@index');
+Route::get('testing',[SQLController::class,'index']);
+
 
 Route::get('/', function () {
     return view('welcome');

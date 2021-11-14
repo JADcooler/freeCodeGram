@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\datamanip;
 use App\Http\controllers\SQLController;
+use App\Http\controllers\TestingController;
+use App\Http\controllers\TestreqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,9 @@ use App\Http\controllers\SQLController;
 
 //Route::get('/register', 'RegistrationController@index');
 Route::get('testing',[SQLController::class,'index']);
-
+Route::get('test2',[TestingController::class,'putdata']);
+//Route::get('test2req',[TestingController::class,'putdata']);
+Route::post('test2',[TestreqController::class,'data']);
 
 Route::get('/', function () {
     return view('welcome');

@@ -5,6 +5,12 @@ use App\Http\controllers\datamanip;
 use App\Http\controllers\SQLController;
 use App\Http\controllers\TestingController;
 use App\Http\controllers\TestreqController;
+use App\Http\controllers\RemoveController;
+use App\Http\controllers\RemovebuttonController;
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +26,10 @@ use App\Http\controllers\TestreqController;
 //Route::get('/register', 'RegistrationController@index');
 Route::get('testing',[SQLController::class,'index']);
 Route::get('test2',[TestingController::class,'putdata']);
+Route::get('elimination',[RemoveController::class,'index']);
 //Route::get('test2req',[TestingController::class,'putdata']);
 Route::post('test2',[TestreqController::class,'data']);
+Route::post('elimination',[RemovebuttonController::class,'data']);
 
 Route::get('/', function () {
     return view('welcome');
